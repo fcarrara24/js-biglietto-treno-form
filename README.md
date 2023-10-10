@@ -16,3 +16,5 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 - innanzi tutto imbastisco la struttura grezza dell'html con gli input, con i 3 campi di testo e i bottoni per inviare o annullare
 
 - imbastisco una struttura di output di controllo per i vari campi
+
+- creo una funzione che si attiva al click su genera e prende tutti i valori in entrata, controllando che siano compilati correttamente
