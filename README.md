@@ -18,3 +18,5 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 - imbastisco una struttura di output di controllo per i vari campi
 
 - creo una funzione che si attiva al click su genera e prende tutti i valori in entrata, controllando che siano compilati correttamente
+
+- dopo aver controllato che la distanza sia valida, applico lo sconto alle categorie protette e mostro il messaggio all'utente
