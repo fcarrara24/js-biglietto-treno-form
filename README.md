@@ -31,3 +31,7 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 - aggiustiamo il css per mostrare il lavoro
+
+### SFIDA PERSONALE
+
+linkando allo script html2canvas sono in grado di trasformare un elemento qualsiasi della pagina in un elementoi tela che, dopo essere stato convertito in immagine puo essere scaricato

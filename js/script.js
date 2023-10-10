@@ -1,12 +1,15 @@
 const create = document.getElementById('create');
 const reset = document.getElementById('reset');
+const download = document.getElementById('download');
+
+const errorBox = document.getElementById('errorBox');
+
 
 /**
  * input control
  */
 create.addEventListener("click", function () {
     const euroKm = 0.21;
-    const errorBox = document.getElementById('errorBox');
     const outputBox = document.getElementById('outputBox');
     const name = document.getElementById('name').value;
     let trname = name.trim();
@@ -22,7 +25,7 @@ create.addEventListener("click", function () {
 
         return;
     }
-    //name checking => name and surname muist have at least one space between, name and surname must be at least 1 letter
+    //name checking => name and surname must have at least one space between, name and surname must be at least 1 letter
 
     if ((trname.length === trname.replaceAll(/\s/g, "").length) || trname.replaceAll(/\s/g, "").length < 2) {
         outputBox.classList.add("d-none");
@@ -86,3 +89,45 @@ reset.addEventListener("click", function () {
     document.getElementById('errorBox').classList.add("d-none");
     document.getElementById('outputBox').classList.add("d-none");
 });
+
+
+
+/**
+ * download triggerer
+ */
+download.addEventListener("click", function () {
+    const card = document.getElementById('outCard');
+    //if display is visible
+    const ticket = document.getElementById('outputBox');
+
+    if (window.getComputedStyle(ticket).display !== "none") {
+        canvasCreaterTriggerer(card);
+    } else {
+        errorBox.textContent = 'non puoi scaricare il biglietto dato che non è stato ancora generato';
+        errorBox.classList.remove("d-none");
+    }
+
+});
+
+
+/**
+ * given a canvas item it create a canvas to parse data and download jpg
+ * @param {*} element 
+ */
+function canvasCreaterTriggerer(element) {
+    //if the promise is success creates a canvas with element (sintax external)
+    html2canvas(element).then(canvas => {
+        // Convert the canvas to a data URL representing a JPEG image
+        const dataURL = canvas.toDataURL('image/jpeg');
+
+        // Create a link element to trigger the download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = dataURL; //giving the url I want triggered
+        downloadLink.download = 'biglietto.jpg';
+
+        // Creating and removing in the document the element to trigger 
+        document.body.appendChild(downloadLink);
+        downloadLink.click(); // triggering the url
+        document.body.removeChild(downloadLink);
+    });
+}
