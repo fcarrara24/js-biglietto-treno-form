@@ -14,3 +14,5 @@ Scrivere un programma che chieda all’utente:
 Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
 - innanzi tutto imbastisco la struttura grezza dell'html con gli input, con i 3 campi di testo e i bottoni per inviare o annullare
+
+- imbastisco una struttura di output di controllo per i vari campi
