@@ -1,5 +1,9 @@
 const create = document.getElementById('create');
+const reset = document.getElementById('reset');
 
+/**
+ * input control
+ */
 create.addEventListener("click", function () {
     const euroKm = 0.21;
     const errorBox = document.getElementById('errorBox');
@@ -68,3 +72,17 @@ create.addEventListener("click", function () {
 function rndInt(min, max) {
     return (Math.floor(Math.random() * (max + 1 - min)) + min);
 }
+
+/**
+ * resetter for values
+ */
+reset.addEventListener("click", function () {
+
+    document.getElementById('name').value = "";
+    document.getElementById('distance').value = "";
+    document.getElementById('age').value = "";
+
+    //output reset
+    document.getElementById('errorBox').classList.add("d-none");
+    document.getElementById('outputBox').classList.add("d-none");
+});

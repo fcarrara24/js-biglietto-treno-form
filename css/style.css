@@ -1,0 +1,57 @@
+:root{
+    --bg-red: #b91550;
+    --bg-gray: #808080;
+    --bg-btn: #cccccc;
+    --bg-card: #FFFFFF;
+}
+
+body{
+    background-color: var(--bg-red);
+}
+
+label, select, option, input {
+    
+    border-color: var(--bg-red);
+    text-align: center;
+}
+
+label{
+    color: var(--bg-red);
+}
+
+select{
+    padding: 1.5px;
+}
+
+select, option, input{
+    border: 1px solid var(--bg-red);
+    border-radius: 3px;
+}
+
+/* buttons */
+button{
+    color: var(--bg-red);
+    background-color: var(--bg-btn);
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: bolder;
+}
+
+button:hover{
+    border: 2px solid orange;
+}
+
+.container-bottom{
+    height: 100px;
+}
+.my-row{
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#nameContainer{
+    background-color: var(--bg-gray);
+}

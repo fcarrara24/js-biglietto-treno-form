@@ -22,3 +22,12 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 - dopo aver controllato che la distanza e nome e cognome siano sia validi, applico lo sconto alle categorie protette e mostro il messaggio all'utente
 
 - creiamo una funzione randomica aggiuntiva per il controllo delle variabili carrozza e codice operativo
+
+- creiamo una variabile di reset sia per i valori che per la visibilita degli altri contenuti
+
+### MILESTONE 2:
+
+Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
+Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
+
+- aggiustiamo il css per mostrare il lavoro
