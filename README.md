@@ -19,4 +19,6 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 
 - creo una funzione che si attiva al click su genera e prende tutti i valori in entrata, controllando che siano compilati correttamente
 
-- dopo aver controllato che la distanza sia valida, applico lo sconto alle categorie protette e mostro il messaggio all'utente
+- dopo aver controllato che la distanza e nome e cognome siano sia validi, applico lo sconto alle categorie protette e mostro il messaggio all'utente
+
+- creiamo una funzione randomica aggiuntiva per il controllo delle variabili carrozza e codice operativo

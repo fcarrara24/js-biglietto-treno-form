@@ -5,6 +5,7 @@ create.addEventListener("click", function () {
     const errorBox = document.getElementById('errorBox');
     const outputBox = document.getElementById('outputBox');
     const name = document.getElementById('name').value;
+    let trname = name.trim();
     let km = document.getElementById('distance').value;
     const age = document.getElementById('age').value;
     let dCoefficient = 1;
@@ -15,6 +16,14 @@ create.addEventListener("click", function () {
         errorBox.textContent = 'si prega di compilare tutti i campi';
         errorBox.classList.remove("d-none");
 
+        return;
+    }
+    //name checking => name and surname muist have at least one space between, name and surname must be at least 1 letter
+
+    if ((trname.length === trname.replaceAll(/\s/g, "").length) || trname.replaceAll(/\s/g, "").length < 2) {
+        outputBox.classList.add("d-none");
+        errorBox.textContent = 'scrivere sia il nome che cognome separati';
+        errorBox.classList.remove("d-none");
         return;
     }
 
@@ -41,8 +50,21 @@ create.addEventListener("click", function () {
 
     document.getElementById('output-name').innerHTML = name;
     document.getElementById('output-offer').innerHTML = age;
+    document.getElementById('output-rnd-wagon').innerHTML = rndInt(1, 9);
+    document.getElementById('output-rnd-CP').innerHTML = rndInt(10000, 99999);
     document.getElementById('output-price').innerHTML = price.toFixed(2) + " €";
 
     errorBox.classList.add("d-none");
     outputBox.classList.remove("d-none");
 });
+
+/**
+ * takes two integers, return a random value between them (included)
+ * 
+ * @param {*} min Int, min value
+ * @param {*} max Int, max value
+ * @returns random
+ */
+function rndInt(min, max) {
+    return (Math.floor(Math.random() * (max + 1 - min)) + min);
+}
